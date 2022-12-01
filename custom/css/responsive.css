@@ -1,0 +1,78 @@
+@media Screen and (max-height: 1200px){
+
+
+
+
+
+}
+
+
+
+@media Screen and (max-width: 991px){
+
+
+
+
+
+
+}
+
+
+
+@media Screen and (max-width: 767px){
+canvas{
+    width: 100%;
+    height: 100%;
+}
+.main-banner{
+    background-size: cover;
+}
+.mobile-phone img {
+    width: 77%;
+}
+.banner-cap img {
+    width: 100%;
+}
+.mobile-arebic img{
+  width: 100%;
+}
+#sign-in {
+    position: relative;
+    min-width: 240px;
+}
+
+}
+
+
+
+
+
+@media Screen and (max-width: 575px){
+
+
+
+}
+
+
+
+
+
+@media Screen and (max-width: 480px){
+
+
+}
+
+
+
+/* 
+
+@media Screen and (max-width: 320px){
+
+
+
+
+
+}
+
+ */
+
