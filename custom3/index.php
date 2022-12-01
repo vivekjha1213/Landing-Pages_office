@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Funzstation</title>  
     
-<?php include("header-js.php");
-include 'connect.php';
-
-	session_start();
-
-	 if ( !isset( $_SESSION['count'] ) ) 
-     $_SESSION['count'] = 1; 
-	 //else $_SESSION['count']++;
-
-
+<?php include("../header-js.php");
+include '../connect.php';
 ?>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -31,7 +23,6 @@ include 'connect.php';
 <script type="text/javascript">
 console.log("start ajax");
 $(document).ready(function(){    
-var count=<?php echo $_SESSION['count']; ?>;
 
     $(".submityes").click(function() {
         $('#newgen').append('<div class="spinner-border"></div>');
@@ -42,16 +33,10 @@ var count=<?php echo $_SESSION['count']; ?>;
         //console.log(operator);
         console.log(msisdn);
         console.log(cid);
-        
 		    //console.log(sessionToken);
 		    //return false;
-		//alert(count);
-		
-		
-		if(count<=3)
-		{	
-			
-			$.ajax({
+
+            $.ajax({
                 type:"POST",
                 url:"pin_request.php",
                 data:{msisdn:msisdn,cid:cid},
@@ -81,17 +66,6 @@ var count=<?php echo $_SESSION['count']; ?>;
         
                 }
 			});
-		
-        //alert(count);////////////////////////////////
-		count=count+1;///////////////////////////////
-		
-		}
-		else
-		{
-			alert("You can not apply more then 3 times");////////////////////////////
-			<?php session_destroy();?>;
-		}
-		
 	});
 });
 </script>
@@ -143,45 +117,57 @@ var count=<?php echo $_SESSION['count']; ?>;
               <input type="text" id="msisdn" name="txtcn" placeholder="" style="width:100%">
 			       <input type="hidden" id="cid" name="cid" value="<?php echo $_GET['cid'];?>">
             
-              <button type="submit" value="SUBSCRIBE" class="submityes only-en btn-door" style="width:100%">SUBMIT</button>
+              <button type="submit" value="SUBSCRIBE" class="submityes only-en btn-door" style="width:100%">SUBSCRIBE</button>
 			  <button type="submit" value="SUBSCRIBE" class="submityes only-ar btn-door" style="width:100%">اشترك  </button>
 			  <br>
 			  <div id="newgen"></div>
 			  </div>
           </div>
-		  
+		  <!--FOR ENGLISH CLOSE-->
+		  <!--FOR ARABIC-->
+		  <!--<div class="doorgaan only-ar">
+			 <div align="center" >
+              <p><label for="operator">اسم المشغل</label></P>
+              <select id="operator" name="operator" class="classic" style="width:50%">
+                <option value="60201">اورنج</option>
+				<option value="60202">فودافون </option>
+                <!--<option value="وي">وي</option>
+                <option value="اتصالات">اتصالات</option>-->
+              <!--</select>
+
+              <p><label for="txtcn">رقم الهاتف</label></p>
+              <input type="text" id="msisdn" name="txtcn" placeholder="+201" style="width:50%">
+			  <input type="hidden" id="cid" name="cid" value="<?php //echo $_GET[cid]; ?>">
+            <button type="submit" value="SUBSCRIBE" id="submityes" style="width:50%">اشترك</button>
+			<br>
+			<div id="newgen"></div>
+			</div>  
+          </div>-->
 		  <!--FOR ARABIC CLOSE-->
 		  <!--FOR ENGLISH-->
           <div class="condition-box only-en">
-            <h4><b>TERMS AND CONDITIONS</b></h4>
-            <!--<ul>
-              <li><p>Service price point is 1.15 / day Vat inclusvie.</p></li>
+             <h4><b>TERMS AND CONDITIONS</b></h4>
+             <ul>
+            <li><p>By subscribing to the service, you are accepting all Terms and Conditions of the service and authorize to share your mobile number with our partner ArshiyaInfosolutions, who manages this subscription service.</p></li>
               <li><p>Data charges would apply for browsing contents on this portal.</p></li>
               <li><p>The service is supported only for smartphones if your device supports streaming, you can stream unlimited videos while being an active subscriber to the service.</p></li>
               <li><p>To make use of this service, one must be more than 18 years old or have received permission from your parents or person who is authorized to pay your mobile bill.</p></li>
-              <li><p>To unsubscribe from the service  Send U 39 to 801471.</p></li>
-			     <ul>-->
-			  <ul>
-			  	<li>This Service is available for STC Customers, It costs 1 Riyals renewed daily for prepaid subscribers, and costs 34.5 Riyals renewed monthly for postpaid subscribers (VAT Included). To unsubscribe send U 39 to 801471.</li>
-			  	<li>VAT Tax was already paid with refill card for prepaid subscribers.</li>
-			  </ul>   	
+              <li><p>To unsubscribe from the service  Send U70 to 606068.</p></li>
+			       <ul>	
           </div>
 		  <!--FOR ENGLISH CLOSE-->
 		  <!--FOR ARABIC-->
 		  <div class="condition-box only-ar">
-          <h4><b>الأحكام والشروط  </b></h4>  
-          <!--<ul>
-            <li><p><span dir="rtl">ننقطة سعر الخدمة 1.15 / يوم شامل ضريبة القيمة المضافة. </span></p></li>
-            <li><p> <span dir="rtl">من خلال الاشتراك في الخدمة ، فإنك تقبل جميع شروط وأحكام الخدمة وتفوض مشاركة رقم هاتفك المحمول مع شريكنا ArshiyaInfosolutions ، الذي يدير خدمة الاشتراك هذه. </span></p></li>
-            <li><p> <span dir="rtl">يتم تطبيق رسوم البيانات على تصفح المحتويات على هذه البوابة. </span></p></li>
-            <li><p><span dir="rtl"> الخدمة مدعومة فقط للهواتف الذكية إذا كان جهازك يدعم البث ، فيمكنك بث مقاطع فيديو غير محدودة أثناء كونك مشتركًا نشطًا في الخدمة. </span></p></li>
-            <li><p><span dir="rtl"> للاستفادة من هذه الخدمة ، يجب أن يكون عمر الشخص أكثر من 18 عامًا أو حصل على إذن من والديك أو الشخص المخول بدفع فاتورة هاتفك المحمول. </span></p></li>
-            <li><p><span dir="rtl">للإلغاء الاشتراك بالخدمة أرسل  U 39 إلى  801471 </span></p></li>  
-          </ul>-->
-          <pre>هذه الخدمة متوفرة لعملاء شركة الاتصالات السعودية مقابل 1 ريال لعملاء مسبق الدفع تتجدد يومياً و بمقابل 34.5 ريال لعملاء المفوتر
-			تتجدد شهرياً (شامل قيمة الضريبة المضافة) ولإلغاء الاشتراك الرجاء ارسال غ 13 الى 801471
-            تم تحصيل مبلغ الضريبة المضافة لعملاء مسبق الدفع عند عملية شحن الرصيد </pre>
-      </div>
+            <h4><b>الأحكام والشروط   </b></h4>
+        <ul>
+            <li><p><span dir="rtl">نقطة سعر الخدمة هي 1.15 / يوم شامل ضريبة القيمة المضافة.</span></p></li>
+        	<li><p> <span dir="rtl">من خلال الاشتراك في الخدمة ، فإنك تقبل جميع شروط وأحكام الخدمة وتفوض مشاركة رقم هاتفك المحمول مع شريكنا ArshiyaInfosolutions ، الذي يدير خدمة الاشتراك هذه. </span></p></li>
+        	<li><p> <span dir="rtl">يتم تطبيق رسوم البيانات على تصفح المحتويات على هذه البوابة. </span></p></li>
+        	<li><p><span dir="rtl"> الخدمة مدعومة فقط للهواتف الذكية إذا كان جهازك يدعم البث ، فيمكنك بث مقاطع فيديو غير محدودة أثناء كونك مشتركًا نشطًا في الخدمة. </span></p></li>
+        	<li><p><span dir="rtl"> للاستفادة من هذه الخدمة ، يجب أن يكون عمر الشخص أكثر من 18 عامًا أو حصل على إذن من والديك أو الشخص المخول بدفع فاتورة هاتفك المحمول. </span></p></li>
+            <li><p><span dir="rtl">لإلغاء الاشتراك في الخدمة أرسل U70 إلى  801471</span></p></li>  
+         </ul>
+          </div>
 		  <!--FOR ARABIC CLOSE-->
           
         </div>
@@ -189,7 +175,7 @@ var count=<?php echo $_SESSION['count']; ?>;
    </div>
 </div>
 
-<?php include("footer-js.php")?>
+<?php include("../footer-js.php")?>
 
 </body>
 <script type="text/javascript">

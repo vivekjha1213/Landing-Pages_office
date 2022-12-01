@@ -1,0 +1,485 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+p,a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+}
+h1{
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  font-size: 30px;
+  line-height: 38px;
+}
+button{
+  background-color: transparent;
+  border:none;
+  outline: none !important;
+}
+.main-con{
+  max-width: 100%;
+}
+.fun-inner{
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.fig-box{
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.fig-box .logo {
+/*  position: absolute;
+  left: 0;
+  top: 0;*/
+  background-color: rgb(209, 16, 16, 0.9);
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;/*
+  z-index: 99;*/
+  padding: 14px 30px 14px 30px;
+}
+.head-box{
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  background-color: #f6f6f6;
+  padding: 0px 10px;
+}
+.head-box p{
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.fig-box .logo a{
+  display: inline-block;
+  max-width: 150px;
+  line-height: 15px;
+  text-decoration: none;
+}
+.upper-list{
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  text-align: right;
+}
+.upper-list ul{
+  display: inline-block;
+  min-width: 95px;
+}
+.upper-list li{
+  text-align: center;
+  font-size: 13px;
+  padding: 2px 8px;
+  background-color: #2d31d4;
+  color: #fff;
+}
+.upper-list li:first-child{
+  background-color: #d11010;
+  color: #fff;
+}
+.upper-list li:last-child{
+  border: none;
+  background-color: #388c09;
+  color: #fff;
+}
+.fig-box .logo a span{
+  font-size: 12px;
+  color: #ff2d00;
+  line-height: 18px;
+  text-align: center;
+  padding: 0px 6px;
+}
+.fig-box .logo img{
+  max-width: 150px;
+}
+.main-box .subs-frm{
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  position: relative;
+}
+.main-box .mobile-box{
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+}
+.main-box .subs-frm .subs-field{
+  height: 45px;
+  width: 315px;
+  box-shadow: none;
+  padding-left: 25px;
+  border: 2px solid #0f7505;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.main-box .subs-frm .subs-field::-webkit-input-placeholder{
+  font-size: 18px;
+}
+.main-box .subs-frm .subs-field::-moz-placeholder{
+  font-size: 18px;
+}
+.doorgaan{
+  padding: 40px 0px;
+  text-align: center;
+}
+.chiller_cb {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  padding: 10px 0px 0px;
+}
+.chiller_cb label {
+  font-size: 8px;
+  font-weight: normal;
+}
+.chiller_cb label i {
+  font-style: italic;
+  font-size: 13px;
+  position: absolute;
+  top: 22px;
+  padding-left: 10px;
+}
+.chiller_cb.tick-box {
+  margin-bottom: -13px;
+}
+.doorgaan input[type=checkbox] {
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+}
+.btn-door{
+  display: inline-block;
+  background-color: #d40c0c;
+  padding: 11px 60px;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  border: 0px;
+  font-size: 35px;
+  width: 100%;
+  font-weight: bold;
+}
+.btn-door:hover,.btn-door:focus{
+  background-color: #d40c0ccf;
+  outline: 0px;
+}
+.doorgaan h6{
+  margin-bottom: 20px;
+}
+.doorgaan label {
+  font-size: 22px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.doorgaan input[type=text], .doorgaan select{
+  border: 3px solid #d40c0c;
+  display: inline-block;
+  padding: 10px 40px;
+  text-decoration: none !important;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 22px;
+}
+.doorgaan input[type=text]:focus {
+  outline: 0px;
+}
+.main-box .subs-frm label{
+  font-size: 11px;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+.form-control:focus{
+  border-color: #d40c0c;
+  box-shadow: none;
+  color: #000;
+}
+.form-check{
+  position: relative;
+  width: 315px;
+  margin: auto;
+}
+.form-check .form-check-input{
+  position: absolute;
+  left:19px;
+  top: 6px;
+}
+.main-box form p a{
+  font-size: 8pt;
+  color: #000;
+}
+.condition-box{
+  background-color: #e5e5e5;
+  padding: 35px 20px 30px 20px;
+}
+.condition-box ul li{
+  font-size: 10pt;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+.condition-box ul li:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  background-color: #fd2d00;
+  border-radius: 50%;
+}
+.condition-box{
+  font-size: 10pt
+}
+.condition-box h4{
+  font-size: 10pt;
+  margin-bottom: 15px;
+}
+.add-links{
+  background-color: #000;
+  padding: 0px 15px 6px 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.add-links ul li{
+  display: inline-block;
+}
+.add-links ul li a{
+  font-size: 10pt;
+  color: #fff;
+  position: relative;
+  padding-left: 10px;
+}
+.add-links ul li a:before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  right: -8px;
+  top: 0;
+}
+.add-links ul li:first-child a{
+  padding-left: 0px;
+}
+.add-links ul li:last-child a:before{
+  display: none;
+}
+.condition-box p{
+  text-align: left;
+  margin-bottom: 0;
+}
+.condition-box{
+  text-align: center;
+}
+.condition-box h4{
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+.condition-box h4 span{
+  position: absolute;
+  right: -14px;
+  top: 1px;
+}
+video{
+  width: 100%;
+}
+.btn-1 {
+  font-weight: 100;
+  border-radius: 15px;
+}
+.btn-1 svg {
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.btn-1 rect {
+  fill: none;
+  stroke-width: 3;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+.btn-1:hover {
+  color: #000;
+}
+.btn-1:hover rect {
+  stroke-width: 3;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn {
+  color: #000;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  text-transform: capitalize;
+  width: 100%;
+  padding: 10px 0px;
+  border-radius: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+.btn:focus{
+  box-shadow: none;
+}
+/*Responsive css starts*/
+@media Screen and (max-width: 1200px){
+.vdo_div video{
+  width: 100%;
+}
+  .doorgaan {
+    padding: 55px 0px 30px;
+  }
+
+}
+
+@media Screen and (max-width: 767px){
+  h1 {
+    font-size: 22px;
+    text-align: left;
+    line-height: 30px;
+  }
+  
+  .main-box {
+    padding: 0px;
+  }
+  .main-inner {
+    padding: 12px 0px;
+  }
+  .fig-box .logo img{
+    max-width: 120px;
+  }/*
+  .fig-box .logo + .vdo_div video {
+    margin-top: 70px;
+  }*/
+  .fig-box .logo{
+    padding: 14px 15px 14px 15px;
+  }
+  .main-box form {
+    margin: -60px auto 0 auto;
+   }
+   .main-box form .subs-field,.main-box form .form-group{
+    width: 100%;
+   }
+   .main-box .mobile-box {
+    margin-bottom: 35px;
+  }
+  .main-box form .subs-field {
+    height: 46px;
+  }
+  .main-box .mobile-box {
+    margin-bottom: 35px;
+    padding: 0px 20px;
+  }
+  .main-box form .subs-field::-webkit-input-placeholder{
+   font-size: 16px;
+  }
+  .main-box form .subs-field::-moz-placeholder{
+   font-size: 16px;
+  }
+  .main-box form button {
+    width: 120px;
+  }
+  .condition-box {
+    padding: 25px 20px 15px 20px;
+  }
+  .add-links {
+    text-align: center;
+  }
+  .fig-box .logo + video{
+    margin-top: 70px;
+  }
+  .doorgaan {
+    padding: 55px 0px 30px;
+  }
+  .doorgaan h6 {
+    margin-bottom: 8px;
+    line-height: 22px;
+  }
+  .doorgaan label{
+    font-size: 25px;
+  }
+  .btn-door{
+    font-size: 35px;
+  }
+}
+
+@media Screen and (max-width: 667px){
+.vdo_div video{
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width: 484px){
+  h1{
+    font-size: 16px;
+    padding-right:10px;
+    line-height: 25px;
+   }
+  .add-links {
+    background-color: #000;
+    padding: 0px 15px 6px 15px; 
+  }
+  .add-links ul li a {
+    font-size: 9pt;
+  }
+}
+
+
+@media screen and (max-width: 320px){
+  .btn-door {
+    padding: 13px 64px;
+  }
+
+}
+
+
+/*responsive css ends*/
+
+.watch-video {
+  background: #0f7505;
+  padding: 20px;
+  text-align: center;
+}
+.watch-video h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.watch-video h2 span{
+  color: #f5bb0c;
+}

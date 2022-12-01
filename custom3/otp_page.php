@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Funzstation</title>  
     
-<?php include("header-js.php");
-include 'connect.php';
-
-	
-
-
+<?php include("../header-js.php");
+include '../connect.php';
 ?>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://mobilecafe4u.mobi/uae/css/custom.css"></link>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,11 +35,10 @@ $(document).ready(function(){
         console.log(cid);
         console.log(msisdn);
         console.log(pin);
-        //return false;
+       // return false;
 		    //console.log(sessionToken);
 		    //return false;
 		    //for getting cookies by Name
-		
 		
             $.ajax({
                 type:"POST",
@@ -55,9 +51,9 @@ $(document).ready(function(){
                       //var jsonData=JSON.stringify(result);
                       //alert(jsonData);
                       //return false;
-                    if (jsonData.status =="0")
+                    if (jsonData.status == "0")
                     {   
-                        location.href = 'thank.php?msisdn='+msisdn+'&cid='+cid+'';
+                        location.href = '../thank.php?msisdn='+msisdn+'&cid='+cid+'';
                         return false;
                     }
                    else
@@ -69,7 +65,6 @@ $(document).ready(function(){
         
                 }
 			});
-		
 	});
 });
 </script>
@@ -94,9 +89,6 @@ $(document).ready(function(){
 			<!--FOR ENGLISH-->
           <div class="doorgaan">
 			<div align="center" >
-			
-			
-			
               <p class="only-en"><label for="txtcn">Enter OTP</label></P>
 			  <p class="only-ar"><label for="txtcn">رأدخل  OTP </label></p>
               <input type="text" id="pin" name="txtcn" placeholder="" style="width:100%">
@@ -109,49 +101,40 @@ $(document).ready(function(){
 			  <div id="newgen"></div>
 			  </div>
           </div>
-		  <!--FOR ARABIC CLOSE-->
 		  <!--FOR ENGLISH-->
           <div class="condition-box only-en">
-            <h4><b>TERMS AND CONDITIONS</b></h4>
-            <!--<ul>
-              <li><p>Service price point is 1.15 / day Vat inclusvie.</p></li>
+          	<h4><b>TERMS AND CONDITIONS</b></h4>
+            <ul>
+            <li><p>By subscribing to the service, you are accepting all Terms and Conditions of the service and authorize to share your mobile number with our partner ArshiyaInfosolutions, who manages this subscription service.</p></li>
               <li><p>Data charges would apply for browsing contents on this portal.</p></li>
               <li><p>The service is supported only for smartphones if your device supports streaming, you can stream unlimited videos while being an active subscriber to the service.</p></li>
               <li><p>To make use of this service, one must be more than 18 years old or have received permission from your parents or person who is authorized to pay your mobile bill.</p></li>
-              <li><p>To unsubscribe from the service  Send U 39 to 801471.</p></li>
-			     <ul>-->
-			  <ul>
-			  	<li>This Service is available for STC Customers, It costs 1 Riyals renewed daily for prepaid subscribers, and costs 34.5 Riyals renewed monthly for postpaid subscribers (VAT Included). To unsubscribe send U 39 to 801471.</li>
-			  	<li>VAT Tax was already paid with refill card for prepaid subscribers.</li>
-			  </ul>   	
+              <li><p>To unsubscribe from the service  Send U70 to 606068.</p></li>
+			     <ul>	
           </div>
 		  <!--FOR ENGLISH CLOSE-->
 		  <!--FOR ARABIC-->
 		  <div class="condition-box only-ar">
-          <h4><b>الأحكام والشروط  </b></h4>  
-          <!--<ul>
-            <li><p><span dir="rtl">ننقطة سعر الخدمة 1.15 / يوم شامل ضريبة القيمة المضافة. </span></p></li>
-            <li><p> <span dir="rtl">من خلال الاشتراك في الخدمة ، فإنك تقبل جميع شروط وأحكام الخدمة وتفوض مشاركة رقم هاتفك المحمول مع شريكنا ArshiyaInfosolutions ، الذي يدير خدمة الاشتراك هذه. </span></p></li>
-            <li><p> <span dir="rtl">يتم تطبيق رسوم البيانات على تصفح المحتويات على هذه البوابة. </span></p></li>
-            <li><p><span dir="rtl"> الخدمة مدعومة فقط للهواتف الذكية إذا كان جهازك يدعم البث ، فيمكنك بث مقاطع فيديو غير محدودة أثناء كونك مشتركًا نشطًا في الخدمة. </span></p></li>
-            <li><p><span dir="rtl"> للاستفادة من هذه الخدمة ، يجب أن يكون عمر الشخص أكثر من 18 عامًا أو حصل على إذن من والديك أو الشخص المخول بدفع فاتورة هاتفك المحمول. </span></p></li>
-            <li><p><span dir="rtl">للإلغاء الاشتراك بالخدمة أرسل  U 39 إلى  801471 </span></p></li>  
-          </ul>-->
-          <pre>هذه الخدمة متوفرة لعملاء شركة الاتصالات السعودية مقابل 1 ريال لعملاء مسبق الدفع تتجدد يومياً و بمقابل 34.5 ريال لعملاء المفوتر
-			تتجدد شهرياً (شامل قيمة الضريبة المضافة) ولإلغاء الاشتراك الرجاء ارسال غ 13 الى 801471
-            تم تحصيل مبلغ الضريبة المضافة لعملاء مسبق الدفع عند عملية شحن الرصيد </pre>
-      </div>
-		  
+
+		  <h4><b>الأحكام والشروط   </b></h4>	
+        <ul>
+            <li><p><span dir="rtl">نقطة سعر الخدمة هي 1.15 / يوم شامل ضريبة القيمة المضافة.</span></p></li>
+        	<li><p> <span dir="rtl">من خلال الاشتراك في الخدمة ، فإنك تقبل جميع شروط وأحكام الخدمة وتفوض مشاركة رقم هاتفك المحمول مع شريكنا ArshiyaInfosolutions ، الذي يدير خدمة الاشتراك هذه. </span></p></li>
+        	<li><p> <span dir="rtl">يتم تطبيق رسوم البيانات على تصفح المحتويات على هذه البوابة. </span></p></li>
+        	<li><p><span dir="rtl"> الخدمة مدعومة فقط للهواتف الذكية إذا كان جهازك يدعم البث ، فيمكنك بث مقاطع فيديو غير محدودة أثناء كونك مشتركًا نشطًا في الخدمة. </span></p></li>
+        	<li><p><span dir="rtl"> للاستفادة من هذه الخدمة ، يجب أن يكون عمر الشخص أكثر من 18 عامًا أو حصل على إذن من والديك أو الشخص المخول بدفع فاتورة هاتفك المحمول. </span></p></li>
+            <li><p><span dir="rtl">لإلغاء الاشتراك في الخدمة أرسل U70 إلى  801471</span></p></li>
+
+        </ul>  
+          </div>
 		  <!--FOR ARABIC CLOSE-->
-     
-          
           
         </div>
       </div>
    </div>
 </div>
 
-<?php include("footer-js.php")?>
+<?php include("../footer-js.php")?>
 
 </body>
 <script type="text/javascript">
